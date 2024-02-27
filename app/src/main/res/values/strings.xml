@@ -3,9 +3,10 @@
     <string name="title_accueil">Accueil</string>
     <string name="title_codes">Codes</string>
     <string name="title_cours">Cours</string>
-    <string name="title_statistiques">Stat</string>
+    <string name="title_statistiques">Statistiques</string>
     <string name="la_page_des_statistiques">La page des statistiques</string>
     <string name="la_page_des_cours">La page des cours</string>
     <string name="la_page_des_codes">La page des codes</string>
     <string name="la_page_d_accueil">La page d\'accueil</string>
+    <string name="la_page_de_connexion">La page de connexion</string>
 </resources>
