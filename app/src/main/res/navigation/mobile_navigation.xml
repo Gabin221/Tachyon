@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_accueil">
+
+    <fragment
+        android:id="@+id/navigation_accueil"
+        android:name="com.example.tachyon.ui.accueil.AccueilFragment"
+        android:label="@string/title_accueil"
+        tools:layout="@layout/fragment_accueil" />
+
+    <fragment
+        android:id="@+id/navigation_codes"
+        android:name="com.example.tachyon.ui.codes.CodesFragment"
+        android:label="@string/title_codes"
+        tools:layout="@layout/fragment_codes" />
+
+    <fragment
+        android:id="@+id/navigation_cours"
+        android:name="com.example.tachyon.ui.cours.CoursFragment"
+        android:label="@string/title_cours"
+        tools:layout="@layout/fragment_cours" />
+
+    <fragment
+        android:id="@+id/navigation_statistiques"
+        android:name="com.example.tachyon.ui.statistiques.StatistiquesFragment"
+        android:label="@string/title_statistiques"
+        tools:layout="@layout/fragment_statistiques" />
+</navigation>
