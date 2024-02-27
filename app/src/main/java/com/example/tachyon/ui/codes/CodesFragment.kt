@@ -1,36 +1,43 @@
 package com.example.tachyon.ui.codes
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
-import androidx.fragment.app.Fragment
-import com.example.tachyon.databinding.FragmentCodesBinding
+import androidx.appcompat.widget.Toolbar
+import androidx.viewpager.widget.ViewPager
+import com.google.android.material.tabs.TabLayout
+import com.example.tachyon.R
 
-class CodesFragment : Fragment() {
+class MainActivity : AppCompatActivity() {
 
-    private var _binding: FragmentCodesBinding? = null
+    private lateinit var pager: ViewPager // creating object of ViewPager
+    private lateinit var tab: TabLayout // creating object of TabLayout
+    private lateinit var bar: Toolbar // creating object of ToolBar
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+        // set the references of the declared objects above
+        pager = findViewById(R.id.viewPager)
+        tab = findViewById(R.id.tabs)
+        bar = findViewById(R.id.toolbar)
 
-        _binding = FragmentCodesBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        // To make our toolbar show the application
+        // we need to give it to the ActionBar
+        setSupportActionBar(bar)
 
-        val textView: TextView = binding.textCodes
-        return root
-    }
+        // Initializing the ViewPagerAdapter
+        val adapter = ViewPagerAdapter(supportFragmentManager)
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        // add fragment to the list
+        adapter.addFragment(PythonFragment(), "Python")
+        adapter.addFragment(CPlusPlusFragment(), "C++")
+        adapter.addFragment(KotlinFragment(), "Kotlin")
+
+        // Adding the Adapter to the ViewPager
+        pager.adapter = adapter
+
+        // bind the viewPager with the TabLayout.
+        tab.setupWithViewPager(pager)
     }
 }
