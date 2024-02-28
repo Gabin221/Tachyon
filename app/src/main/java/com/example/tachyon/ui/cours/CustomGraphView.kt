@@ -1,4 +1,4 @@
-package com.example.tachyon.ui.statistiques
+package com.example.tachyon.ui.cours
 
 import android.content.Context
 import android.graphics.Canvas

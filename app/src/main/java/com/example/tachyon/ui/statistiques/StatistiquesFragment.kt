@@ -18,8 +18,6 @@ class StatistiquesFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    lateinit var customGraphView: CustomGraphView
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,36 +27,10 @@ class StatistiquesFragment : Fragment() {
         _binding = FragmentStatistiquesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        // val textView: TextView = binding.textStatistiques
-
-        customGraphView = binding.root.findViewById(R.id.customGraphView) // Utilisez la variable globale
-
-        // Exemple de données de fonction
-        val functionValues = mutableListOf<Float>()
-        for (i in -4..4) {
-            val y = i * i.toFloat() // Par exemple, y = x^2
-            functionValues.add(y)
-        }
-
-        // Exemple de données de nuage de points
-        val scatterPoints = listOf(
-            Pair(-4f, 16f),
-            Pair(-3f, 9f),
-            Pair(-2f, 4f),
-            Pair(-1f, 1f),
-            Pair(0f, 0f),
-            Pair(1f, 1f),
-            Pair(2f, 4f),
-            Pair(3f, 9f),
-            Pair(4f, 16f)
-        )
-
-        customGraphView.setFunctionValues(functionValues)
-        customGraphView.setScatterPoints(scatterPoints)
+        val textView: TextView = binding.textStatistiques
 
         return root
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
