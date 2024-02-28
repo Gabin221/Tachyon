@@ -65,13 +65,13 @@ class CustomGraphView @JvmOverloads constructor(
     private fun calculatePointX(x: Float, width: Float): Float {
         // Calculer la position X du point en fonction de la largeur de la vue
         // Vous pouvez ajuster cette fonction en fonction de vos besoins spécifiques
-        return x * width / 10 // maxXValue est la valeur maximale de votre axe X
+        return x * width / 15 // maxXValue est la valeur maximale de votre axe X
     }
 
     private fun calculatePointY(y: Float, height: Float): Float {
         // Calculer la position Y du point en fonction de la hauteur de la vue
         // Vous pouvez ajuster cette fonction en fonction de vos besoins spécifiques
-        return height - y * height / 10 // maxYValue est la valeur maximale de votre axe Y
+        return height - y * height / 20 // maxYValue est la valeur maximale de votre axe Y
     }
 
     fun setFunctionValues(values: List<Float>) {
@@ -86,13 +86,59 @@ class CustomGraphView @JvmOverloads constructor(
         invalidate()
     }
 
+    private val axisPaint = Paint().apply {
+        color = Color.BLACK
+        strokeWidth = 3f
+    }
+
+    private val textPaint = Paint().apply {
+        color = Color.BLACK
+        textSize = 30f
+    }
+
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        canvas.let {
-            drawFunction(it)
-            drawScatter(it)
+        val padding = 50 // Valeur de la marge ou de l'espace autour du contenu du graphique
+
+        // Dessiner l'axe X
+        canvas.drawLine(
+            padding.toFloat(),
+            height - padding.toFloat(),
+            width.toFloat() - padding.toFloat(),
+            height - padding.toFloat(),
+            axisPaint
+        )
+
+        // Dessiner l'axe Y
+        canvas.drawLine(
+            padding.toFloat(),
+            height - padding.toFloat(),
+            padding.toFloat(),
+            0f,
+            axisPaint
+        )
+
+        // Dessiner les graduations sur l'axe X
+        val intervalX = (width - 2 * padding) / 10
+        for (i in 0..10) {
+            val x = padding + i * intervalX
+            canvas.drawLine(x.toFloat(), height - padding.toFloat(), x.toFloat(), height - padding.toFloat() - 20, axisPaint)
+            canvas.drawText(i.toString(), x.toFloat() - 10, height - padding.toFloat() + 40, textPaint)
         }
+
+        // Dessiner les graduations sur l'axe Y
+        val intervalY = (height - 2 * padding) / 10
+        for (i in 0..10) {
+            val y = height - padding - i * intervalY
+            canvas.drawLine(padding.toFloat(), y.toFloat(), padding.toFloat() + 20, y.toFloat(), axisPaint)
+            canvas.drawText(i.toString(), padding.toFloat() - 50, y.toFloat() + 10, textPaint)
+        }
+
+        // Dessiner la fonction et le nuage de points
+        drawFunction(canvas)
+        drawScatter(canvas)
     }
+
 
     private fun drawFunction(canvas: Canvas) {
         if (functionValues.size < 2) return

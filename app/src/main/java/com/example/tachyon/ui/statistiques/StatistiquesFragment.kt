@@ -35,7 +35,7 @@ class StatistiquesFragment : Fragment() {
 
         // Exemple de données de fonction
         val functionValues = mutableListOf<Float>()
-        for (i in -10..10) {
+        for (i in -4..4) {
             val y = i * i.toFloat() // Par exemple, y = x^2
             functionValues.add(y)
         }
