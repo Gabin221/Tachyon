@@ -1,13 +1,11 @@
 package com.example.tachyon.ui.statistiques
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.example.tachyon.R
 import com.example.tachyon.databinding.FragmentStatistiquesBinding
 
 class StatistiquesFragment : Fragment() {
@@ -27,7 +25,7 @@ class StatistiquesFragment : Fragment() {
         _binding = FragmentStatistiquesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textStatistiques
+        // val textView: TextView = binding.textStatistiques
 
         return root
     }
