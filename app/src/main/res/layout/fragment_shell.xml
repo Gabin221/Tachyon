@@ -36,7 +36,7 @@
             android:layout_marginHorizontal="10dp"
             android:background="@drawable/back"
             android:paddingLeft="15dp"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:text=" echo 'Hello World!';" />
 
     </LinearLayout>

@@ -36,7 +36,7 @@
             android:layout_marginHorizontal="10dp"
             android:background="@drawable/back"
             android:paddingLeft="15dp"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:text="def hello():\n\tprint('Hello World!')\n\n\nif __name__ == '__main__':\n\thello()" />
 
     </LinearLayout>

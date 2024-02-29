@@ -36,7 +36,7 @@
             android:layout_marginHorizontal="10dp"
             android:background="@drawable/back"
             android:paddingLeft="15dp"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:text="&lt;!DOCTYPE html>\n&lt;meta name='viewport' content='width=device-width, initial-scale=1.0'>\n&lt;html lang='fr'>\n\t&lt;head>\n\t\t&lt;title>Title of the page&lt;/title>\n\t&lt;/head>\n\t&lt;body>\n\t\t&lt;h1>Hello world!&lt;/h1>\n\t&lt;/body>\n&lt;/html>" />
 
     </LinearLayout>

@@ -40,7 +40,7 @@
                 android:layout_marginHorizontal="10dp"
                 android:background="@drawable/back"
                 android:paddingLeft="15dp"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:text="\\documentclass[10pt,a4paper]{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage[french]{babel}\n\\usepackage[T1]{fontenc}\n\\usepackage{amsmath}\n\\usepackage{amsfonts}\n\\usepackage{amssymb}\n\\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}\n\n\\\begin{document}\nHello World!\n\\\end{document}" />
 
     </LinearLayout>

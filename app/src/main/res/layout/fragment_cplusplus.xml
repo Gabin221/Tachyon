@@ -36,7 +36,7 @@
             android:layout_marginHorizontal="10dp"
             android:background="@drawable/back"
             android:paddingLeft="15dp"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:text="#include &lt;iostream>\n\nusing namespace std;\n\nint main() {\n\tcout &lt;&lt; 'Hello World!' &lt;&lt; endl;\n\treturn 0;\n}" />
 
     </LinearLayout>
