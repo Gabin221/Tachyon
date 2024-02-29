@@ -1,13 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="C++" />
+        android:paddingTop="10dp"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="10dp"
+            android:text="Hello World!" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:justificationMode="inter_word"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Ceci est le fameux programme 'Hello World!' en C++. Son objectif est purement pédagogique, il sert à montrer de manière simple la structure et un peu de la syntaxe d'un langage de programmation." />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/back"
+            android:paddingLeft="15dp"
+            android:textSize="20sp"
+            android:text="#include &lt;iostream>\n\nusing namespace std;\n\nint main() {\n\tcout &lt;&lt; 'Hello World!' &lt;&lt; endl;\n\treturn 0;\n}" />
+
+    </LinearLayout>
+
+</ScrollView>

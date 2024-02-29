@@ -30,14 +30,18 @@
             android:layout_marginBottom="10dp"
             android:text="Ceci est le fameux programme 'Hello World!' en C. Son objectif est purement pédagogique, il sert à montrer de manière simple la structure et un peu de la syntaxe d'un langage de programmation." />
 
-        <TextView
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:background="@drawable/back"
-            android:paddingLeft="15dp"
-            android:textSize="20sp"
-            android:text="#include &lt;stdio.h>\n\nint main() {\n\tprintf('Hello, World!');\n\treturn 0;\n}" />
+            android:scrollbars="horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/back"
+                android:paddingLeft="15dp"
+                android:textSize="20sp"
+                android:text="\\documentclass[10pt,a4paper]{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage[french]{babel}\n\\usepackage[T1]{fontenc}\n\\usepackage{amsmath}\n\\usepackage{amsfonts}\n\\usepackage{amssymb}\n\\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}\n\n\\\begin{document}\nHello World!\n\\\end{document}" />
 
     </LinearLayout>
 

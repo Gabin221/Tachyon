@@ -48,13 +48,14 @@ class CodesFragment : Fragment() {
                 3 -> CPlusPlusFragment()
                 4 -> ShellFragment()
                 5 -> WebFragment()
+                6 -> LaTeXFragment()
                 // Ajoutez d'autres fragments pour d'autres onglets ici
                 else -> throw IllegalArgumentException("Invalid tab position")
             }
         }
 
         override fun getCount(): Int {
-            return 6 // Nombre total d'onglets
+            return 7 // Nombre total d'onglets
         }
 
         override fun getPageTitle(position: Int): CharSequence? {
@@ -65,6 +66,7 @@ class CodesFragment : Fragment() {
                 3 -> "C++"
                 4 -> "Shell"
                 5 -> "Web"
+                6 -> "LaTeX"
                 // Ajoutez d'autres titres pour d'autres onglets ici
                 else -> throw IllegalArgumentException("Invalid tab position")
             }
