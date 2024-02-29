@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.tachyon.R
 import com.example.tachyon.databinding.FragmentCoursBinding
-import com.example.tachyon.ui.statistiques.CustomGraphView
+import com.example.tachyon.ui.cours.CustomGraphView
 
 class CoursFragment : Fragment() {
 
@@ -31,7 +31,7 @@ class CoursFragment : Fragment() {
 
         val textView: TextView = binding.textCours
 
-        customGraphView = binding.root.findViewById(R.id.customGraphView) // Utilisez la variable globale
+        /*customGraphView = binding.root.findViewById(R.id.customGraphView) // Utilisez la variable globale
 
         // Exemple de données de fonction
         val xValues = linspace(-4f, 4f, 1000)
@@ -53,7 +53,7 @@ class CoursFragment : Fragment() {
 
         customGraphView.setFunctionValues(xValues, yValues)
 
-        customGraphView.setScatterPoints(scatterPoints)
+        customGraphView.setScatterPoints(scatterPoints)*/
 
         return root
     }
