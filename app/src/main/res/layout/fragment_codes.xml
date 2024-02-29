@@ -14,7 +14,7 @@
         android:contentDescription="@string/la_page_des_codes"
         app:tabGravity="fill"
         app:tabMode="scrollable"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
