@@ -5,16 +5,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:paddingTop="10dp">
 
     <!-- This TextView indicates new fragment is open -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Python"
-        android:textColor="#0F9D58"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/back"
+        android:paddingLeft="15dp"
+        android:textSize="16sp"
+        android:text="Python\n\tcoucou" />
 
 </LinearLayout>
